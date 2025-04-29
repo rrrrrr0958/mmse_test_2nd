@@ -27,7 +27,9 @@ public class InputNumber : MonoBehaviour
     [SerializeField, Header("目前值")]
     private int num = 0;
 
-    private readonly string[] weekdays = { "一", "二", "三", "四", "五", "六", "日" };
+    public int Num => num;
+
+    private readonly string[] weekdays = { "日", "一", "二", "三", "四", "五", "六" };
 
     void Start()
     {
