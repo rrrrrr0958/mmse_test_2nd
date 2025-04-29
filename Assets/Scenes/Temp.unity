@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "\u5F35"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2deec21334967417191c0b1fd81b10ac, type: 2}
   m_sharedMaterial: {fileID: -3338990749610081730, guid: 2deec21334967417191c0b1fd81b10ac, type: 2}
