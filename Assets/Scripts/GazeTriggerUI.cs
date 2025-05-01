@@ -14,16 +14,20 @@ public class GazeTriggerUI : MonoBehaviour
     private bool hasTriggered = false;
 
     void Start()
+{
+    if (mainCamera != null) mainCamera.enabled = true;
+    if (targetCamera != null) targetCamera.enabled = false;
+
+    // 確保 DOF 有正確參考
+    if (blurVolumeObject != null)
     {
-        if (blurVolumeObject != null)
+        blurVolumeComponent = blurVolumeObject.GetComponent<Volume>();
+        if (blurVolumeComponent != null)
         {
-            blurVolumeComponent = blurVolumeObject.GetComponent<Volume>();
-            if (blurVolumeComponent != null)
-            {
-                blurVolumeComponent.profile.TryGet(out dof);
-            }
+            blurVolumeComponent.profile.TryGet(out dof);
         }
     }
+}
 
     void Update()
     {
